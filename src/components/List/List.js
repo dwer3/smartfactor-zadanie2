@@ -16,7 +16,7 @@ class List extends React.Component {
 }   
 
 getPlaces() {
-  fetch("https://rekrutacja-sf.herokuapp.com/parking")
+  fetch("parking")
     .then(res => res.json())
     .then(
       (result) => {

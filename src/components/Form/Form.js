@@ -20,7 +20,7 @@ class Form extends React.Component {
           'X-AUTH-LOGIN': "Damian Werbowy",
           'X-AUTH-TOKEN': '6fee3b56-d8f0-4d68-a4da-3378970237da'
       },
-        body: {
+        body: JSON.stringify({
           "1": true,
           "2": true,
           "3": false,
@@ -29,9 +29,9 @@ class Form extends React.Component {
           "6": false,
           "7": true,
           "8": false
-          }
+          })
     };
-    fetch('https://rekrutacja-sf.herokuapp.com/parking/'+name, requestOptions)
+    fetch('parking/'+name, requestOptions)
         .then(response => response.json())
         .then(data => {console.log(data)});
   }
